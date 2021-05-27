@@ -43,5 +43,5 @@ async def predict_api(file: UploadFile = File(...)):
     model=load_model()
     output=predict(image,model)
     return output
-#if __name__ =="__main__":
- #   uvicorn.run(app , port=8081 ,host='0.0.0.0')
+if __name__ =="__main__":
+    uvicorn.run(app , port=8000 ,host='0.0.0.0')

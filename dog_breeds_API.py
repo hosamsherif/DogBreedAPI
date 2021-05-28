@@ -42,6 +42,10 @@ async def hello_world():
 async def predict_api(file: UploadFile = File(...)):
     image=read_image(await file.read())
     #model=load_model()
+    try:
+        model = keras.models.load_model('model.h5')
+    except Exception as e:
+        return str(e)
     #output=predict(image,model)
     return "hossam"
     # async def predict_api():

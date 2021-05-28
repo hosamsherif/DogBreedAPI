@@ -1,9 +1,9 @@
 from fastapi import FastAPI,File,UploadFile
-from tensorflow import keras
-import tensorflow as tf
-import uvicorn
-import cv2
-import numpy as np
+##from tensorflow import keras
+#import tensorflow as tf
+##import uvicorn
+##import cv2
+##import numpy as np
 #import  base64
 #from PIL import Image
 import io
@@ -39,8 +39,8 @@ async def hello_world():
     return "Hello world!"
 
 @app.post("/predict/image")
-#async def predict_api(file: UploadFile = File(...)):
 async def predict_api():
+    #async def predict_api(file: UploadFile = File(...)):
     #image=read_image(await file.read())
     #model=load_model()
     #output=predict(image,model)

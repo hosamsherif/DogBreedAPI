@@ -12,7 +12,7 @@ app=FastAPI()
 Filtered_breeds=['beagle', 'chihuahua', 'doberman','french_bulldog', 'golden_retriever', 'malamute', 'pug',
                  'saint_bernard', 'scottish_deerhound','tibetan_mastiff']
 
-
+'''
 def read_image(content):
     nparr=np.fromstring(content,np.uint8)
     image=cv2.imdecode(nparr,cv2.IMREAD_COLOR)
@@ -33,7 +33,7 @@ def predict(image,model):
         'score ':str(pred[0][breed_index])
         }
 
-
+'''
 @app.get('/index')
 async def hello_world():
     return "Hello world!"

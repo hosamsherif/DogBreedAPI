@@ -39,13 +39,12 @@ async def hello_world():
     return "Hello world!"
 
 @app.post("/predict/image")
-async def predict_api():
-    return "hossam"
-#async def predict_api(file: UploadFile = File(...)):
- #   image=read_image(await file.read())
-  #  model=load_model()
-   # output=predict(image,model)
-    #return output
-
+async def predict_api(file: UploadFile = File(...)):
+    image=read_image(await file.read())
+    model=load_model()
+    output=predict(image,model)
+    return output
+    # async def predict_api():
+    #    return "hossam"
 #if __name__ =="__main__":
  #   uvicorn.run(app , port=8000 ,host='0.0.0.0')

@@ -43,7 +43,7 @@ async def predict_api(file: UploadFile = File(...)):
     image=read_image(await file.read())
     #model=load_model()
     try:
-        model = keras.models.load_model('model.h5')
+        img=cv2.imread('a.jpg')
     except Exception as e:
         return str(e)
     #output=predict(image,model)

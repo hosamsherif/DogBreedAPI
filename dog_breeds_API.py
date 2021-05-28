@@ -41,7 +41,7 @@ async def hello_world():
 @app.post("/predict/image")
 async def predict_api(file: UploadFile = File(...)):
     image=read_image(await file.read())
-    #model=load_model()
+    model=load_model()
     #output=predict(image,model)
     return "hossam"
     # async def predict_api():

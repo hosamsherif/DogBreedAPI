@@ -2,7 +2,7 @@ from fastapi import FastAPI,File,UploadFile
 from tensorflow import keras
 #import tensorflow as tf
 ##import uvicorn
-#import cv2
+import cv2
 import numpy as np
 #import  base64
 #from PIL import Image
